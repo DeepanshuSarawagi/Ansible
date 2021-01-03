@@ -39,4 +39,4 @@ ansible 2.9.16
   python version = 2.7.5 (default, Nov 16 2020, 22:23:17) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
 
 # Linux command to connect to a network device automatically
-sudo nmcli connection modify <ethernet device name> connection.autoconnect yes
+sudo nmcli connection modify "ethernet device name" connection.autoconnect yes
