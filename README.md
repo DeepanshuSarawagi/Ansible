@@ -40,3 +40,15 @@ ansible 2.9.16
 
 # Linux command to connect to a network device automatically
 sudo nmcli connection modify "ethernet device name" connection.autoconnect yes
+
+# Ansible inventory file parameters
+
+The default inventory file is /etc/ansible/hosts
+
+Below is the sample inventory file configuration:
+
+Hostname ansible_host=ipAddress ansible_port=port ansible_ssh_pass=Password
+
+# Command to test the connectivity between
+
+ansible hostname -m ping -i inventoryfile
