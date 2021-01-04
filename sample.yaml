@@ -47,3 +47,11 @@ employee:
     name: mango
     color: yellow
     weight: 150g
+
+# YAML exercise 7 - List of employees
+
+employees:
+    -
+        name: john
+        gender: male
+        age: 24
