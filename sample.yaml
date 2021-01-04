@@ -8,3 +8,10 @@ property2: value2
 name: apple
 color: red
 weight: 90g
+
+# YAML exercise 3 - A dictionary within a dictionary
+
+employee:
+    name: john
+    gender: male
+    age: 24
