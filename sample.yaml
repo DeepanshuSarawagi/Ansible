@@ -32,3 +32,18 @@ employee:
 - apple2
 - apple3
 - apple4
+
+# YAML exercise 6 - List of dictionaries
+
+-
+    name: apple
+    color: red
+    weight: 100g
+-
+    name: apple
+    color: red
+    weight: 90g
+-
+    name: mango
+    color: yellow
+    weight: 150g
