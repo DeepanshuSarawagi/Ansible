@@ -15,3 +15,14 @@ employee:
     name: john
     gender: male
     age: 24
+
+# YAML exercise 4 - Creating multiple dictionaries within a dictionary
+
+employee:
+    name: john
+    gender: male
+    age: 24
+    address:
+        city: edison
+        state: new jersey
+        country: united states
