@@ -15,3 +15,9 @@ web3
 
 [db_servers]
 db1
+
+# Adding group within a group
+
+[all_servers:children]
+web_servers
+db_servers
