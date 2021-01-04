@@ -18,7 +18,7 @@ employee:
 
 # YAML exercise 4 - Creating multiple dictionaries within a dictionary
 
-employee:
+employee1:
     name: john
     gender: male
     age: 24
