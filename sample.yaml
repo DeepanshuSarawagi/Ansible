@@ -26,3 +26,9 @@ employee:
         city: edison
         state: new jersey
         country: united states
+
+# YAML exercise 5 - List of apples
+- apple1
+- apple2
+- apple3
+- apple4
