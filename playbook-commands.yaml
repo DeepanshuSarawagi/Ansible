@@ -1,0 +1,13 @@
+-
+  name: 'To run commands on target server'
+  hosts: all
+  tasks:
+    -
+      name: 'Displaying target server hosts file'
+      command: cat /etc/hosts
+    -
+      name: 'Displaying disk filesystem'
+      command: df -hT
+    -
+      name: 'Displaying memory utilization'
+      command: free -H
