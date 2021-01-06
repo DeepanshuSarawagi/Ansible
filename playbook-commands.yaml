@@ -10,4 +10,4 @@
       command: df -hT
     -
       name: 'Displaying memory utilization'
-      command: free -H
+      command: free -h
