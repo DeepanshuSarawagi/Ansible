@@ -10,3 +10,9 @@
       lineinfile:
           path: /etc/resolv.conf
           line: 'nameserver {{ ip_address }}'
+    - name: 'Disable SNMP port'
+      firewalld:
+          port: '{{ snmp_port }}'
+          permanent: true
+          state: disabled
+          
