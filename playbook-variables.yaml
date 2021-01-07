@@ -1,0 +1,12 @@
+# Here we will learn how to use variables in Ansible playbook YAML file
+# The variables are defined in double curly braces and should be enclosed within
+# quotes. for example '{{ variable_name }}'
+
+-
+  name: 'Update the DNS server entry in target servers'
+  hosts: web_nodes
+  tasks:
+    - name: 'Update the entry in /etc/hosts'
+      lineinfile:
+          path: /etc/resolv.conf
+          line: 'nameserver {{ ip_address }}'
