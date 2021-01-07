@@ -5,6 +5,10 @@
 -
   name: 'Update the DNS server entry in target servers'
   hosts: web_nodes
+  vars:
+      car_model: 'BMW M3'
+      country: 'India'
+      title: 'DevOps Engineer'
   tasks:
     - name: 'Update the entry in /etc/hosts'
       lineinfile:
@@ -15,4 +19,9 @@
           port: '{{ snmp_port }}'
           permanent: true
           state: disabled
-          
+    - name: 'Print my car model'
+      command: 'echo "My car model name is {{ car_model }}"'
+    - name: 'Print my country'
+      command: 'echo "I live in {{ country }}"'
+    - name: 'Print my work title'
+      command: 'echo "I work as a {{ title }}"'
