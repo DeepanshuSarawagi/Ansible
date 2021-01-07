@@ -1,0 +1,9 @@
+-
+    name: 'Update the DNS server entry'
+    hosts: web_nodes
+    tasks:
+        -
+            name: 'Update entry in /etc/resolv.conf'
+            lineinfile:
+                path: /etc/resolv.conf
+                line: nameserver 1.2.3.4
