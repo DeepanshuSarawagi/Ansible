@@ -1,0 +1,9 @@
+-
+  name: 'Ensure httpd service is started on webservers'
+  hosts: web_nodes
+  tasks:
+      -
+        name: 'Start the httpd service'
+        service:
+            name: httpd
+            state: started
