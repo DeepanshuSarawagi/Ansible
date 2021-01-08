@@ -5,9 +5,18 @@
     -
       name: 'Displaying target server hosts file'
       command: cat /etc/hosts
+      register: output1
     -
       name: 'Displaying disk filesystem'
       command: df -hT
+      register: output2
     -
       name: 'Displaying memory utilization'
       command: free -h
+      register: output3
+    - debug:
+          var: output1.stdout_lines
+    - debug:
+          var: output2.stdout_lines
+    - debug:
+          var: output3.stdout_lines
