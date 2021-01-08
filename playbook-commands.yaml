@@ -15,8 +15,8 @@
       command: free -h
       register: output3
     - debug:
-          var: output1.stdout_lines
-    - debug:
-          var: output2.stdout_lines
-    - debug:
-          var: output3.stdout_lines
+          var: "{{ item }}.stdout_lines"
+      loop:
+          - output1
+          - output2
+          - output3
