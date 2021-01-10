@@ -1,0 +1,32 @@
+# In this playbook we will learn about the use of Loops in Ansible. Loops
+# would be an array of items. This is a newly added directive in Ansible. Earlier
+# to create loops, there is a different directive called with_items. Each item
+# can have a dirctionary of key/value pairs. Let us take a took at the example
+# playbook below where we create multiple users on an Ansbile target "web_nodes"
+# and how use of loops can simplify the tasks
+
+---
+
+-
+  name: "Create users on remote servers"
+  hosts: web_nodes
+  tasks:
+      - name: "Create users on web servers"
+        user: name='{{ item.name }}' state=present uid='{{ item.uid }}'
+        loop:
+            - name: joe
+              uid: 1010
+            - name: john
+              uid: 1011
+            - name: george
+              uid: 1012
+            - name: angela
+              uid: 1013
+            - name: ravi
+              uid: 1014
+            - name: priya
+              uid: 1015
+            - name: vicky
+              uid: 1016
+            - name: mike
+              uid: 1017
