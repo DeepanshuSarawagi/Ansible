@@ -4,3 +4,5 @@
   tasks:
       - name: 'Execute a script on all web server nodes'
         script: /tmp/restart_webserver.sh
+        register: result
+      - debug: var="{{ result }}.stdout_lines"
