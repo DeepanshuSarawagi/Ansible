@@ -52,3 +52,13 @@ Hostname ansible_host=ipAddress ansible_port=port ansible_ssh_pass=Password
 # Command to test the connectivity between
 
 ansible hostname -m ping -i inventoryfile
+
+# Enabling SSH Key-Based user authentication
+1) Generate public-private key pair
+ssh-keygen
+2) Copy the public key to the target servers
+ssh-copy-id ansible1.example.com
+ssh-copy-id ansible2.example.com
+3) Test the SSH connectivity and ensure the passwordless authentication is working
+ssh ansible1.example.com
+ssh ansible2.example.com
