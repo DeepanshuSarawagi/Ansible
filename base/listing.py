@@ -8,7 +8,7 @@ except ImportError:
 
 RESULT = {}
 RESULT['all'] = {}
-PIPE = Popen(['cat /opt/Ansible/base/inventory/'], stdout=PIPE, universal_newlines=True)
+PIPE = Popen(['cat', '/opt/Ansible/base/inventory/'], stdout=PIPE, universal_newlines=True)
 RESULT['all']['hosts'] = []
 
 for line in PIPE.stdout.readlines():
