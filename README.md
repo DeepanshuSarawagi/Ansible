@@ -69,3 +69,10 @@ $ssh-copy-id ansible2.example.com
 $ssh ansible1.example.com
 
 $ssh ansible2.example.com
+
+# Commands to list servers from the inventoryfile
+
+$ansible -i inventory db --list-hosts
+
+# Commands to list servers from the inventory file in JSON format
+$ansible-inventory -i inventory --list
