@@ -9,6 +9,7 @@ except ImportError:
 RESULT = {}
 RESULT['all'] = {}
 PIPE = Popen(['cat', '/opt/Ansible/base/inventory'], stdout=PIPE, universal_newlines=True)
+# PIPE = Popen(['getent', 'hosts'], stdout=PIPE, universal_newlines=True)
 RESULT['all']['hosts'] = []
 
 for line in PIPE.stdout.readlines():
@@ -20,6 +21,6 @@ RESULT['all']['vars'] = {}
 if len(sys.argv) == 2 and sys.argv[1] == '--list':
     print(json.dumps(RESULT))
 elif len(sys.argv) == 3 and sys.argv[1] == '--host':
-    print(json.dumps({RESULT['all']}))
+    print(json.dumps(RESULT['all']))
 else:
     print("Requires an argument. Please use --list or --hosts")
