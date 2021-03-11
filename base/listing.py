@@ -20,6 +20,6 @@ RESULT['all']['vars'] = {}
 if len(sys.argv) == 2 and sys.argv[1] == '--list':
     print(json.dumps(RESULT))
 elif len(sys.argv) == 3 and sys.argv[1] == '--host':
-    print(json.dumps(RESULT['all']['hosts']))
+    print(json.dumps({}))
 else:
     print("Requires an argument. Please use --list or --hosts")
